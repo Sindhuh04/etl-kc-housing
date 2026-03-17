@@ -1,7 +1,0 @@
-*.csv
-*.zip
-*.parquet
-*.json.gz
-__pycache__/
-*.pyc
-.env

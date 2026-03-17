@@ -1,24 +1,18 @@
-# ETL Pipeline: KC House Data → PostgreSQL
+# ETL Pipeline — Kaggle Dataset → CSV
 
-Auto-generated data pipeline for King County house sales data.
+## Prompt
+
+Build an ETL pipeline that:
+1. **Ingests** a dataset from Kaggle (user provides the dataset slug, e.g. `zillow/zecon`)
+2. **Transforms** the data: normalize column names, parse dates, handle nulls, remove duplicates, optimize types
+3. **Outputs** the cleaned data as a CSV file
 
 ## Quick Start
 ```bash
 pip install -r requirements.txt
-python3 pipeline.py --help
 ```
 
-## Pipeline Details
-- **Source:** `kc_house_data.csv.zip` (21,613 rows, 21 columns)
-- **Destination:** PostgreSQL `kc_housing.house_sales`
-- **Transformations:** Date parsing, column normalization, type optimization
-- **Quality Checks:** Null analysis, ID uniqueness, price validation, date range
-
-## Usage
-```bash
-# Run with defaults
-python3 pipeline.py
-
-# Custom source/destination
-python3 pipeline.py --source /path/to/data.csv --db-url postgresql://user:pass@host:5432/dbname --table my_table
-```
+## Requirements
+- Python 3.10+
+- Kaggle API credentials (`~/.kaggle/kaggle.json`)
+- Dependencies listed in `requirements.txt`
