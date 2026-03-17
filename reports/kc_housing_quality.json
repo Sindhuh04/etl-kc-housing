@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-03-17T11:03:55.491149",
+  "row_count": 21613,
+  "column_count": 21,
+  "columns": [
+    "id",
+    "date",
+    "price",
+    "bedrooms",
+    "bathrooms",
+    "sqft_living",
+    "sqft_lot",
+    "floors",
+    "waterfront",
+    "view",
+    "condition",
+    "grade",
+    "sqft_above",
+    "sqft_basement",
+    "yr_built",
+    "yr_renovated",
+    "zipcode",
+    "lat",
+    "long",
+    "sqft_living15",
+    "sqft_lot15"
+  ],
+  "checks": [
+    {
+      "name": "Null Analysis",
+      "status": "WARN",
+      "details": {
+        "sqft_above": 2
+      }
+    },
+    {
+      "name": "ID Uniqueness",
+      "status": "WARN",
+      "details": "177 duplicate IDs"
+    },
+    {
+      "name": "Price Validation",
+      "status": "PASS",
+      "details": {
+        "min": 75000.0,
+        "max": 7700000.0,
+        "mean": 540088.125,
+        "zero_or_negative": 0
+      }
+    },
+    {
+      "name": "Date Range",
+      "status": "PASS",
+      "details": {
+        "min": "2014-05-02 00:00:00",
+        "max": "2015-05-27 00:00:00",
+        "null_dates": 0
+      }
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "warnings": 2
+  }
+}
